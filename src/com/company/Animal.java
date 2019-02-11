@@ -11,6 +11,18 @@ public class Animal {
     private String arrivalDate;
     private String status;
 
+    public Animal(int iDNumber, String name, String animalType, String breed, String color, int age, String arrivalDate,
+                  String status) {
+        this.iDNumber = iDNumber;
+        this.name = name;
+        this.animalTyoe = animalType;
+        this.breed = breed;
+        this.color = color;
+        this.age = age;
+        this.arrivalDate = arrivalDate;
+        this.status = status;
+    }
+
     public int getiDNumber() {
         return iDNumber;
     }
