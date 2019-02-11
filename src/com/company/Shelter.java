@@ -28,4 +28,31 @@ public class Shelter {
 
     }
 
+    public void removeAnimalProfile( String idNumber) {
+        for (int i = 0; i < available.size(); i++) {
+            if (idNumber.equals(available.get(i).getiDNumber())) {
+                available.remove(i);
+            }
+        }
+
+        for (int i = 0; i < pending.size(); i++) {
+            if (idNumber.equals(pending.get(i).getiDNumber())) {
+                pending.remove(i);
+            }
+        }
+
+        for (int i = 0; i < foster.size(); i++) {
+            if (idNumber.equals(foster.get(i).getiDNumber())) {
+                foster.remove(i);
+            }
+        }
+
+        for (int i = 0; i < adopted.size(); i++) {
+            if (idNumber.equals(adopted.get(i).getiDNumber())) {
+                adopted.remove(i);
+            }
+        }
+
+    }
+
 }
