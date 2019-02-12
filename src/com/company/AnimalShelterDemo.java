@@ -49,7 +49,7 @@ public class AnimalShelterDemo {
                 case 1:
 
 
-                    if((bankFunds.getFunds()/shelter.getSizeOfShelter()) >  5000){
+                    if((bankFunds.getFunds()/shelter.getSizeOfShelter()) >  5000 && shelter.getSizeOfShelter() < 75){
 
                         addingAnimals(shelter, idNum);
 
@@ -59,7 +59,7 @@ public class AnimalShelterDemo {
 
                     } else{
 
-                        System.out.println( "Insufficient funds to add a new animal.");
+                        System.out.println( "Can not add an animal at this time. Check funds, or shelter size.");
 
                 }
                     break;
