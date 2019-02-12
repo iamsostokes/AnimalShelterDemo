@@ -10,6 +10,8 @@ public class AnimalShelterDemo {
 	// write your code here
 
         Shelter shelter = new Shelter();
+        Bank bankFunds = new Bank();
+        bankFunds.setFunds(150000);
         boolean running = true;
         int userOption;
         int idNum = 100;
@@ -47,6 +49,8 @@ public class AnimalShelterDemo {
                 case 1:
 
                     addingAnimals(shelter, idNum);
+
+                    bankFunds.subtractFundsForNewAnimals();
 
                     idNum++;
 
