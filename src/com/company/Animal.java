@@ -31,7 +31,7 @@ public class Animal {
                 "The animal color is " + color + "\n" +
                 "The animal age is " + age + "\n" +
                 "The animal arrival date is " + arrivalDate + "\n" +
-                "The animal status is " + status);
+                "The animal status is " + status + "\n");
 
     }
 

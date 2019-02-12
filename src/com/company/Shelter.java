@@ -6,6 +6,10 @@ public class Shelter {
 
     private ArrayList<Animal> animalShelter = new ArrayList<>();
 
+    public int getSizeOfShelter(){
+        return animalShelter.size();
+    }
+
 
     public void addAnimalProfile(Animal animal) {
 
@@ -34,27 +38,10 @@ public class Shelter {
         for(Animal animal : animalShelter){
 
             animal.printAnimalDetails();
+
         }
 
-//        System.out.println( "\nThese are pending animals: ");
-//        for(Animal animal : pending){
-//
-//            animal.printAnimalDetails();
-//
-//        }
-//
-//        System.out.println( "\nThese are the foster animals:");
-//        for(Animal animal : foster){
-//
-//            animal.printAnimalDetails();
-//
-//        }
-//
-//        System.out.println( "\nThese are the adopted animals:");
-//        for(Animal animal : adopted){
-//
-//            animal.printAnimalDetails();
-//
+
 
 
     }
@@ -71,32 +58,7 @@ public class Shelter {
             }
 
 
-
         }
-
-//            for (int i = 0; i < pending.size(); i++) {
-//
-//                if (id == pending.get(i).getiDNumber()) {
-//
-//                    pending.get(i).printAnimalDetails();
-//
-//                    return pending.get(i);
-//                }
-//            }
-//
-//            for (int i = 0; i < foster.size(); i++) {
-//                if (id == foster.get(i).getiDNumber()) {
-//                    foster.get(i).printAnimalDetails();
-//                    return foster.get(i);
-//                }
-//            }
-//
-//            for (int i = 0; i < adopted.size(); i++) {
-//                if (id == adopted.get(i).getiDNumber()) {
-//                    adopted.get(i).printAnimalDetails();
-//                    return adopted.get(i);
-//                }
-//
 
 
 

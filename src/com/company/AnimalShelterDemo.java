@@ -48,13 +48,22 @@ public class AnimalShelterDemo {
 
                 case 1:
 
-                    addingAnimals(shelter, idNum);
 
-                    bankFunds.subtractFundsForNewAnimals();
+                    if((bankFunds.getFunds()/shelter.getSizeOfShelter()) >  5000){
 
-                    idNum++;
+                        addingAnimals(shelter, idNum);
 
+                        bankFunds.subtractFundsForNewAnimals();
+
+                        idNum++;
+
+                    } else{
+
+                        System.out.println( "Insufficient funds to add a new animal.");
+
+                }
                     break;
+
                 case 2:
 
                     shelter.printAllAnimals();
@@ -77,6 +86,7 @@ public class AnimalShelterDemo {
                     break;
 
                 case 4:
+
                     shelter.printAllAnimals();
 
 

@@ -2,17 +2,17 @@ package com.company;
 
 public class Bank {
 
-    private int funds;
+    private double funds;
 
     public Bank (){
 
     }
 
-    public int getFunds() {
+    public double getFunds() {
         return funds;
     }
 
-    public void setFunds(int funds) {
+    public void setFunds(double funds) {
         this.funds = funds;
     }
 
@@ -20,7 +20,7 @@ public class Bank {
 
         funds -= 5000;
 
-        System.out.println("Your new balance is " + funds );
+        System.out.println("Your new balance is $" + funds + "\n");
 
     }
 
