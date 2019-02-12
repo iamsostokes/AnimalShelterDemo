@@ -4,7 +4,7 @@ public class Animal {
 
     private int iDNumber;
     private String name;
-    private String animalTyoe;
+    private String animalType;
     private String breed;
     private String color;
     private int age;
@@ -15,13 +15,26 @@ public class Animal {
                   String status) {
         this.iDNumber = iDNumber;
         this.name = name;
-        this.animalTyoe = animalType;
+        this.animalType = animalType;
         this.breed = breed;
         this.color = color;
         this.age = age;
         this.arrivalDate = arrivalDate;
         this.status = status;
     }
+
+    public void printAnimalDetails(){
+        System.out.println("The animal id number is " + iDNumber +"\n" +
+                "The animal name is " + name + "\n" +
+                "The animal type is " + animalType + "\n" +
+                "The animal breed is " + breed + "\n" +
+                "The animal color is " + color + "\n" +
+                "The animal age is " + age + "\n" +
+                "The animal arrival date is " + arrivalDate + "\n" +
+                "The animal status is " + status);
+
+    }
+
 
     public int getiDNumber() {
         return iDNumber;
@@ -40,11 +53,11 @@ public class Animal {
     }
 
     public String getAnimalTyoe() {
-        return animalTyoe;
+        return animalType;
     }
 
     public void setAnimalTyoe(String animalTyoe) {
-        this.animalTyoe = animalTyoe;
+        this.animalType = animalTyoe;
     }
 
     public String getBreed() {

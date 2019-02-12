@@ -55,4 +55,36 @@ public class Shelter {
 
     }
 
+    public void printAllAnimals(){
+
+        System.out.println( "\nThese are the available animals:");
+        for(Animal animal : available){
+
+            animal.printAnimalDetails();
+        }
+
+        System.out.println( "\nThese are pending animals: ");
+        for(Animal animal : pending){
+
+            animal.printAnimalDetails();
+
+        }
+
+        System.out.println( "\nThese are the foster animals:");
+        for(Animal animal : foster){
+
+            animal.printAnimalDetails();
+
+        }
+
+        System.out.println( "\nThese are the adopted animals:");
+        for(Animal animal : adopted){
+
+            animal.printAnimalDetails();
+
+        }
+
+    }
+
+
 }
