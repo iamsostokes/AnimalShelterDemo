@@ -23,9 +23,12 @@ public class AnimalShelterDemo {
 
         Animal animal2 = new Animal(98, "Meow Mix", "Cat", "Siamese", "Tan and Brown",
                 3, "00/00/00", "Foster");
-
         shelter.addAnimalProfile(animal2);
 
+        Animal animal3 = new Animal(97,"Albert", "bird", "African grey",
+                "grey",4, "1/22/19", "pending");
+
+        shelter.addAnimalProfile(animal3);
 //
 //        shelter.printAllAnimals();
 
@@ -35,8 +38,8 @@ public class AnimalShelterDemo {
             System.out.println("What would you like to do?\n[1] Add Animal to the Shelter. \n" +
                     "[2] Remove animal from shelter. \n" +
                     "[3] Search for animal by ID number. \n" +
-                    "[4] View and Edit Animal Profile. \n" +
-                    "[5] View Animal by Names. \n" +
+                    "[4] View and Edit Animal Profiles. \n" +
+                    "[5] View Animal by Names, Alphabetically. \n" +
                     "[6] View Animals by Status. \n" +
                     "[7] View Animals Who Have Been in Shelter Longer than 6 Months. \n" +
                     "[8] View Available Funds.\n" +
@@ -96,9 +99,11 @@ public class AnimalShelterDemo {
                     shelter.editAnimal(editIdNumber);
 
 
-
                     break;
                 case 5:
+
+                    shelter.sortAnimalNamesAlphabetically();
+
                     break;
                 case 6:
                     break;

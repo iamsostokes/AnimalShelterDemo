@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Shelter {
@@ -117,6 +118,33 @@ public class Shelter {
         }
 
     }
+
+    public void sortAnimalNamesAlphabetically(){
+
+        ArrayList<String> tempNameArray = new ArrayList<>();
+
+        for (Animal a : animalShelter){
+
+            tempNameArray.add(a.getName());
+        }
+
+       Collections.sort(tempNameArray);
+
+        System.out.println("Animals by name, A-Z.");
+        for(String name : tempNameArray){
+            System.out.println(name);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
 
 
 }
