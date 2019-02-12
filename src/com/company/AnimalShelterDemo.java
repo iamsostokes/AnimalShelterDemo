@@ -49,7 +49,7 @@ public class AnimalShelterDemo {
                 case 1:
 
 
-                    if((bankFunds.getFunds()/shelter.getSizeOfShelter()) >  5000 && shelter.getSizeOfShelter() < 75){
+                    if((bankFunds.getFunds()/shelter.getSizeOfShelter()) >  5000 && shelter.getSizeOfShelter() <= 75){
 
                         addingAnimals(shelter, idNum);
 
@@ -89,7 +89,11 @@ public class AnimalShelterDemo {
 
                     shelter.printAllAnimals();
 
+                    System.out.println("Enter animal's id to edit: ");
 
+                    int editIdNumber = scan.nextInt();
+
+                    shelter.editAnimal(editIdNumber);
 
 
 
