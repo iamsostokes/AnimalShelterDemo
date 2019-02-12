@@ -1,22 +1,132 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class AnimalShelterDemo {
+
+    public static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
 	// write your code here
 
         Shelter shelter = new Shelter();
-        Animal animal = new Animal(100, "Fido", "Dog", "Small Dog", "Brown",
-                2, "00/00/00", "Adopted");
-        shelter.addAnimalProfile(animal, animal.getStatus());
+        boolean running = true;
+        int userOption;
+        int idNum = 100;
 
-        Animal animal2 = new Animal(101, "Fido", "Cat", "Siamese", "Tan and Brown",
+
+        Animal animal = new Animal(99, "Fido", "Dog", "Small Dog", "Brown",
+                2, "00/00/00", "Adopted");
+        shelter.addAnimalProfile(animal);
+
+        Animal animal2 = new Animal(98, "Meow Mix", "Cat", "Siamese", "Tan and Brown",
                 3, "00/00/00", "Foster");
 
-        shelter.addAnimalProfile(animal2, animal2.getStatus());
+        shelter.addAnimalProfile(animal2);
+
+//
+//        shelter.printAllAnimals();
+
+        System.out.println("Welcome to the Java Animal Rescue.");
+
+        do{
+            System.out.println("What would you like to do?\n[1] Add Animal to the Shelter. \n" +
+                    "[2] Remove animal from shelter. \n" +
+                    "[3] Search for animal by ID number. \n" +
+                    "[4] View and Edit Animal Profile. \n" +
+                    "[5] View Animal by Names. \n" +
+                    "[6] View Animals by Status. \n" +
+                    "[7] View Animals Who Have Been in Shelter Longer than 6 Months. \n" +
+                    "[8] View Available Funds.\n" +
+                    "[9] Exit the Shelter. ");
+            System.out.println("Select which option you would like.");
+            userOption = scan.nextInt();
+
+            switch(userOption){
+
+                case 1:
+
+                    addingAnimals(shelter, idNum);
+
+                    idNum++;
+
+                    break;
+                case 2:
+
+                    shelter.printAllAnimals();
+
+                    System.out.println( "What animal would you like to remove?");
+
+                    int id = scan.nextInt();
+
+                    shelter.removeAnimalProfile(id);
+
+                    break;
+                case 3:
+
+                    System.out.println( "Enter an ID number: ");
+
+                    int searchId = scan.nextInt();
+
+                    shelter.searchById(searchId);
+
+                    break;
+
+                case 4:
+                    shelter.printAllAnimals();
 
 
-        shelter.printAllAnimals();
 
+
+
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    break;
+                case 8:
+                    break;
+                case 9:
+                    System.out.println("Exiting the shelter.");
+                    running = false;
+                    break;
+                default:
+                    System.out.println("Not a valid option.");
+                    break;
+            }
+
+        }while(running);
+
+
+        System.out.println("Have a great day.");
+
+
+
+    }
+
+    private static void addingAnimals(Shelter shelter, int idNum) {
+        System.out.println("Enter the animal's Name: ");
+        scan.nextLine();
+        String name = scan.nextLine();
+        System.out.println( "Enter the animal's type: [Dog/cat/etc.]");
+        String type =scan.nextLine();
+        System.out.println( "Enter the animal's breed:");
+        String breed =scan.nextLine();
+        System.out.println( "Enter the animal's color:");
+        String color =scan.nextLine();
+        System.out.println( "Enter the animal's arrival date: ");
+        String arrivalDate =scan.nextLine();
+        System.out.println("Enter the animal's status. [Available, Pending, Foster or Adopted]");
+        String status = scan.nextLine();
+        System.out.println( "Enter the animal's age: ");
+        int age =scan.nextInt();
+
+        Animal b = new Animal (idNum, name, type, breed, color, age, arrivalDate, status);
+
+        b.printAnimalDetails();
+
+        shelter.addAnimalProfile(b);
     }
 }
