@@ -27,8 +27,11 @@ public class AnimalShelterDemo {
 
         Animal animal3 = new Animal(97,"Albert", "bird", "African grey",
                 "grey",4, "1/22/19", "pending");
-
         shelter.addAnimalProfile(animal3);
+        Animal animal4 = new Animal(96,"Kitty", "cat",
+                "fat", "Orange", 6, "11.12.18", "foster" );
+
+       shelter.addAnimalProfile(animal4);
 //
 //        shelter.printAllAnimals();
 
@@ -106,17 +109,36 @@ public class AnimalShelterDemo {
 
                     break;
                 case 6:
+
+                    System.out.println("Enter the status you want to view by: [Available, Pending, Foster or Adopted]");
+
+                    scan.nextLine();
+
+                    String statusSearch = scan.nextLine();
+
+                    shelter.viewAnimalByStatus(statusSearch);
+
                     break;
                 case 7:
+
                     break;
                 case 8:
+
+                    System.out.println("The bank's funds are : " + bankFunds.getFunds());
+
                     break;
                 case 9:
+
                     System.out.println("Exiting the shelter.");
+
                     running = false;
+
                     break;
+
                 default:
+
                     System.out.println("Not a valid option.");
+
                     break;
             }
 

@@ -18,7 +18,6 @@ public class Shelter {
             animalShelter.add(animal);
 
 
-
     }
 
     public void removeAnimalProfile(int id) {
@@ -137,7 +136,17 @@ public class Shelter {
     }
 
 
+public void viewAnimalByStatus(String status){
 
+        for(int i = 0; i < animalShelter.size(); i++ ){
+
+            if(status.equalsIgnoreCase(animalShelter.get(i).getStatus())){
+
+                animalShelter.get(i).printAnimalDetails();
+            }
+        }
+
+}
 
 
 
